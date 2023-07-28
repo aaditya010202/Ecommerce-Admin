@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input,
+  textarea,
+  select {
+    @apply border border-gray-200 rounded-sm px-4 py-2 shadow-md w-full mb-2;
+  }
+  input:focus,
+  textarea:focus,
+  select:focus {
+    @apply border-blue-900;
+  }
+
+  h1 {
+    @apply mb-2 text-gray-800 text-3xl mb-6;
+  }
+
+  label {
+    @apply text-gray-500 text-lg;
+  }
+}
+
+.btn-primary {
+  @apply bg-primary shadow-md rounded-sm px-4 py-1 text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-primary text-white shadow-md
+  transition ease-in-out delay-0 bg-primary  -translate-y-1 scale-105 bg-primary duration-100;
+}
+
+table.basic {
+  @apply w-full bg-white rounded-sm shadow-md;
+}
+
+table.basic thead tr td,
+table.basic thead tr th {
+  @apply text-sm text-gray-500 uppercase border-b border-gray-400 px-4 py-2;
+}
+table.basic tr td {
+  @apply px-4 py-2;
+}
+table.basic a {
+  @apply rounded-sm px-4 py-1 inline-flex mx-2 gap-1 text-sm items-center;
+}
+
+img {
+  max-height: 100%;
+}
+
+.btn-red,
+.btn-default {
+  @apply px-4 py-1 rounded-sm;
+}
+.btn-red {
+  @apply bg-red-200 text-red-600 shadow-md;
+}
+
+.btn-default {
+  @apply bg-gray-200 text-gray-700 shadow-md;
+}
+.btn-default:hover {
+  @apply bg-gray-600 text-white shadow-md;
+}
+.btn-red:hover {
+  @apply bg-red-600 text-white shadow-md;
+}
+.paid-yes {
+  color: #456908;
+  background-color: #d7f7c2;
+  padding: 2px 2px;
+  margin: 1rem;
+}
+.paid-no {
+}
