@@ -14,7 +14,9 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_SECRET,
     }),
   ],
+
   adapter: MongoDBAdapter(clientPromise),
+  secret: process.env.SECRET_KEY,
   callbacks: {
     session: ({ session, token, user }) => {
       if (adminEmails.includes(session?.user?.email)) {
